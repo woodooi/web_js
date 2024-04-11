@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const db = require("./db.js");
 
-const Plane = db.define("planes", {
+const Plane = db.define("planes_lab5", {
   id: {
     type: Sequelize.INTEGER,
     allowNull: false,

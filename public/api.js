@@ -30,7 +30,7 @@ export const getAllPlanes = async () => {
 }
 
 export const deleteAllPlanes = async() => {
-
+    await baseRequest({path: "/", method: "DELETE"});
 }
 
 // create

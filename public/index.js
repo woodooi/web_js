@@ -62,7 +62,6 @@ seatsButton.addEventListener("click", () => {
 );
 
 deleteAll.addEventListener("click", () => {
-    console.log("df")
     deletePlanes();
     refetchAllPlanes();
 });
@@ -78,7 +77,6 @@ const deletePlanes = async () => {
 
 // findAll
 const refetchAllPlanes = async () => {
-    console.log("doing")
     try {
         const fetchedPlanes = await getAllPlanes();
         planes = fetchedPlanes;

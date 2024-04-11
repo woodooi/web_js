@@ -31,9 +31,6 @@ const itemTemplate = ({id, title, vol, seats}) => {
 
 // posts a newly baked card
 export const addItemToPage = ({id, title, vol, seats}, onEdit, onDelete) => {
-    if (title == "" || vol == "" || seats == "") {
-        alert("Input can't be empty")
-    }
     itemsContainer.insertAdjacentHTML( 
         "afterbegin",
         itemTemplate({id, title, vol, seats}))
@@ -75,7 +72,6 @@ export const getEditValue = (id) => {
 export const renderItems = (items, onEdit, onDelete) => {
     itemsContainer.innerHTML = "";
     for (const item of items) {
-        console.log(item);
         addItemToPage({id: item.id, title: item.name, vol:item.tank_volume, seats:item.num_of_seats}, onEdit, onDelete);
     }
     return items
